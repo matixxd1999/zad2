@@ -7,7 +7,7 @@
 
 
 
-    <table>
+    <table class="content-table">
         <thead>
         <tr>
             <th>Lp.</th>
@@ -19,7 +19,7 @@
         </thead>
         <tbody>
         {% for key, i in repoMsw %}
-            <tr>
+            <tr class="active-row">
                 <td>{{ key + 1 }}</td>
                 <td>{{ i.rcp }}</td>
                 <td>{{ i.inicial }}</td>
@@ -31,6 +31,8 @@
         </head>
     </table>
 
-{#    #}
+{% endblock %}
 
+{% block stylesheets %}
+    <link href="{{ asset('public/style.css') }}" rel="stylesheet" />
 {% endblock %}
