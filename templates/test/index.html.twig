@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Raport{% endblock %}
+
+
+{% block body %}
+
+
+
+    <table>
+        <thead>
+        <tr>
+            <th>Lp.</th>
+            <th>RCP</th>
+            <th>Iniciały</th>
+            <th>Ilość</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for key, i in repoMsw %}
+            <tr>
+                <td>{{ key + 1 }}</td>
+                <td>{{ i.rcp }}</td>
+                <td>{{ i.inicial }}</td>
+                <td>{{ i.ilosc }}</td>
+                <td></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        </head>
+    </table>
+
+{#    #}
+
+{% endblock %}
