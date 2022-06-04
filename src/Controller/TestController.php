@@ -35,8 +35,8 @@ class TestController extends AbstractController
         ['rcp'=> 7655, 'inicial'=> 'MN', 'ilosc'=> 230],
         ['rcp'=> 4532, 'inicial'=> 'LH', 'ilosc'=> 196],
     ];
-//dd($repoMsw);
-        return $this->render('test/index.html.twig', [
+//        dd($tablica);
+            return $this->render('test/index.html.twig', [
             'controller_name' => 'TestController',
             'repoMsw' => $tablica,
         ]);

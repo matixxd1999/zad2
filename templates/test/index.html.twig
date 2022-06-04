@@ -18,9 +18,9 @@
         </tr>
         </thead>
         <tbody>
-        {% for key, i in repoMsw %}
+        {% for i in repoMsw |batch(2, "no item") %}
             <tr class="active-row">
-                <td>{{ key + 1 }}</td>
+                <td>{{ index.loop }}</td>
                 <td>{{ i.rcp }}</td>
                 <td>{{ i.inicial }}</td>
                 <td>{{ i.ilosc }}</td>
@@ -34,5 +34,5 @@
 {% endblock %}
 
 {% block stylesheets %}
-    <link href="{{ asset('public/style.css') }}" rel="stylesheet" />
+    {{ include('i..html.twig')|inline_css }}
 {% endblock %}
