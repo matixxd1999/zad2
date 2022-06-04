@@ -5,31 +5,48 @@
 
 {% block body %}
 
-
-
+    {{ ile }}
     <table class="content-table">
         <thead>
+        <tr><h1 class="tittle">Raport MSW</h1></tr>
         <tr>
             <th>Lp.</th>
             <th>RCP</th>
             <th>Iniciały</th>
             <th>Ilość</th>
             <th></th>
+            <th>Lp.</th>
+            <th>RCP</th>
+            <th>Iniciały</th>
+            <th>Ilość</th>
         </tr>
         </thead>
         <tbody>
-        {% for i in repoMsw %}
+        {% for key in 0..(countArray) %}
             <tr class="active-row">
                 <td>{{ loop.index }}</td>
-                <td>{{ i.rcp }}</td>
-                <td>{{ i.inicial }}</td>
-                <td>{{ i.ilosc }}</td>
-                <td></td>
+                <td>{{ repoMsw[key].rcp }}</td>
+                <td>{{ repoMsw[key].inicial }}</td>
+                <td>{{ repoMsw[key].ilosc }}</td>
+                <td class="separate"></td>
+                {% if key <= (countArray-1) or even != null%}
+                <td>{{ loop.index + countArray+1 }}</td>
+                <td>{{ repoMsw[key+countArray+1].rcp }}</td>
+                <td>{{ repoMsw[key+countArray+1].inicial }}</td>
+                <td>{{ repoMsw[key+countArray+1].ilosc }}</td>
+                {% else %}
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                {% endif %}
             </tr>
+
         {% endfor %}
         </tbody>
         </head>
     </table>
+
 
 {% endblock %}
 
