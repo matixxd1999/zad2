@@ -34,6 +34,7 @@ class TestController extends AbstractController
         ['rcp'=> 202020, 'inicial'=> 'GH', 'ilosc'=> 260],
         ['rcp'=> 212121, 'inicial'=> 'MN', 'ilosc'=> 230],
         ['rcp'=> 222222, 'inicial'=> 'LH', 'ilosc'=> 196],
+
         ];
         $even=null;
         $ile = count($tablica);
@@ -44,6 +45,8 @@ class TestController extends AbstractController
         else {
             $countArray = ($ile/2)-0.5;             // Jeśli liczba jest nieparzysta
         }
+
+        header("Refresh: 5");
 
             return $this->render('test/index.html.twig', [
             'countArray' => $countArray,

@@ -27,13 +27,13 @@
                 <td>{{ loop.index }}</td>
                 <td>{{ repoMsw[key].rcp }}</td>
                 <td>{{ repoMsw[key].inicial }}</td>
-                <td>{{ repoMsw[key].ilosc }}</td>
+                <td>{{ repoMsw[key].ilosc }} szt.</td>
                 <td class="separate"></td>
                 {% if key <= (countArray-1) or even != null%}
                 <td>{{ loop.index + countArray+1 }}</td>
                 <td>{{ repoMsw[key+countArray+1].rcp }}</td>
                 <td>{{ repoMsw[key+countArray+1].inicial }}</td>
-                <td>{{ repoMsw[key+countArray+1].ilosc }}</td>
+                <td>{{ repoMsw[key+countArray+1].ilosc }} szt.</td>
                 {% else %}
                     <td></td>
                     <td></td>

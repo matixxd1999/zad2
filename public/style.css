@@ -5,7 +5,10 @@
 * {
     font-family: sans-serif; /* Change your font family */
 }
-
+body {
+    background-color: #c0c0c0;
+    color: white;
+}
 .content-table {
     border-collapse: collapse;
     /*margin: 25px 0;*/
@@ -14,10 +17,9 @@
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.85);
-    width: 80%;
+    width: 90%;
     text-align: center;
     margin: auto;
-
 }
 
 .content-table thead tr {
@@ -33,9 +35,11 @@
 .content-table td {
     padding: 12px 15px;
     text-align: center;
+    border-right: 5px solid var(--colorOfTable);
 }
 
 .content-table tbody tr {
+    background-color: #b6b8be;
     border-bottom: 3px solid #dddddd;
     border-right: 5px solid var(--colorOfTable);
     border-left: 5px solid var(--colorOfTable);
@@ -56,18 +60,21 @@
 .content-table tbody tr.active-row {
     font-weight: bold;
     color: var(--colorOfTable);
-
 }
 
 .tittle{
     text-align: center;
     font-size: 55px;
-
+    color: midnightblue;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    margin-bottom: 30px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .separate{
     width: 5px;
     background: var(--colorOfTable);
     border-bottom: 3px solid var(--colorOfTable);
-
 }
