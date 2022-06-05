@@ -5,7 +5,6 @@
 
 {% block body %}
 
-    {{ ile }}
     <table class="content-table">
         <thead>
         <tr><h1 class="tittle">Raport MSW</h1></tr>
@@ -29,7 +28,7 @@
                 <td>{{ repoMsw[key].inicial }}</td>
                 <td>{{ repoMsw[key].ilosc }} szt.</td>
                 <td class="separate"></td>
-                {% if key <= (countArray-1) or even != null%}
+                {% if key <= (countArray-1) or evenNumber != null%}
                 <td>{{ loop.index + countArray+1 }}</td>
                 <td>{{ repoMsw[key+countArray+1].rcp }}</td>
                 <td>{{ repoMsw[key+countArray+1].inicial }}</td>
