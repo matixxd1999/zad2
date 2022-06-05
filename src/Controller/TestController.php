@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Msw;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,7 +12,9 @@ class TestController extends AbstractController
     #[Route('/', name: 'app_test')]
     public function index(): Response
     {
+        $rcp = $this->getDoctrine()->getRepository(Msw::class)->getRcp();
 
+        dd($rcp);
         $tablica=[['rcp'=> 111, 'inicial'=> 'ML', 'ilosc'=> 893],
         ['rcp'=> 222, 'inicial'=> 'KL', 'ilosc'=> 870],
         ['rcp'=> 333, 'inicial'=> 'FD', 'ilosc'=> 840],
